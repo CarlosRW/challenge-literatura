@@ -75,9 +75,9 @@ public class Libro {
     @Override
     public String toString() {
         return
-                ", titulo='" + titulo + '\'' +
-                ", tema='" + tema + '\'' +
-                ", idioma='" + idioma + '\'' +
-                ", autor=" + autor;
+                ", titulo: '" + titulo + '\'' +
+                ", tema: '" + tema + '\'' +
+                ", idioma: '" + idioma + '\'' +
+                ", autor: " + autor;
     }
 }

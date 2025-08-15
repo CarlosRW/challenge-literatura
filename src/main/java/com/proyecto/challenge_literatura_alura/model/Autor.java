@@ -70,8 +70,8 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "anioMuerte= " + anioMuerte +
-                ", anioNacimiento= " + anioNacimiento +
-                ", nombre= " + nombre;
+        return "año de Muerte: " + anioMuerte +
+                ", año de Nacimiento: " + anioNacimiento +
+                ", nombre: " + nombre;
     }
 }

@@ -33,14 +33,15 @@ public class Aplicacion {
 
         do {
             System.out.println();
+            System.out.println("---------------------");
             System.out.println("Ingrese una opcion:");
             System.out.println();
-            System.out.println("1. Buscar libro por titulo");
-            System.out.println("2. Listar libros registrados");
-            System.out.println("3. Listar autores registrados");
-            System.out.println("4. Listar autores vivos en un determinado año");
-            System.out.println("5. Listar libros por idioma");
-            System.out.println("6. Salir");
+            System.out.println("1 - Buscar libro por titulo");
+            System.out.println("2 - Listar libros registrados");
+            System.out.println("3 - Listar autores registrados");
+            System.out.println("4 - Listar autores vivos en un determinado año");
+            System.out.println("5 - Listar libros por idioma");
+            System.out.println("0 - Salir");
 
             opcion = sc.nextInt();
 
@@ -97,7 +98,7 @@ public class Aplicacion {
                 }
                 case 4:
                 {
-                    System.out.print("Ingrese el anio a buscar:");
+                    System.out.print("Ingrese el año a buscar:");
                     int anio = sc.nextInt();
 
                     autorRepository.findByAnio(anio).forEach(System.out::println);
@@ -112,17 +113,17 @@ public class Aplicacion {
                     libroRepository.findByIdioma(idioma).forEach(System.out::println);
                     break;
                 }
-                case 6:
+                case 0:
                 {
                     System.out.println("Gracias por usar el sistema");
                     break;
                 }
                 default:
                 {
-                    System.out.println("Opcion invalida");
+                    System.out.println("Opción inválida");
                 }
             }
         }
-        while(opcion != 6);
+        while(opcion != 0);
     }
 }
